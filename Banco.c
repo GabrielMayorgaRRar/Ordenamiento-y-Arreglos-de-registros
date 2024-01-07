@@ -9,14 +9,15 @@ struct Cliente
     bool estatus;
 };
 
+void menu();
+
 int main(){
     do
     {
-        /* code */
+        menu();
     }while (/* condition */)
     {
         /* code */
     }
-    
-    
+    return 0;       
 }
