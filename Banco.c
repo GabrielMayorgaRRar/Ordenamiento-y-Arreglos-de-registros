@@ -13,7 +13,6 @@ typedef struct
 } cliente;
 
 void menu();
-bool Buscar(cliente Clientes[], int number_count_new);
 void abrir_count_new(cliente Clientes[], int number_count_new,
                      char nombre_count_new[], int saldo_count_new);
 void eliminar_count(cliente Clientes[], int number_count_new);
@@ -81,18 +80,6 @@ void menu()
     printf("Opcion C - Consultar saldo\n");
     printf("Opcion D - Hacer un deposito\n");
     printf("Opcion E - Retirar dinero\n");
-}
-
-bool Buscar(cliente Clientes[], int number_count_new)
-{
-    for (int i = 0; i < MAX; i++)
-    {
-        if (Clientes[i].numero_de_cuenta == number_count_new)
-        {
-            return true;
-        }
-    }
-    return false;
 }
 
 void abrir_count_new(cliente Clientes[], int number_count_new,
