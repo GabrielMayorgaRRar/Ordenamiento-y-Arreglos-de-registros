@@ -43,26 +43,9 @@ void burbuja(datospersonales personas[], int tamano)
         {
             if (personas[j].imc < personas[j + 1].imc)
             {
-                float aux = personas[j].imc;
-                personas[j].imc = personas[j + 1].imc;
-                personas[j + 1].imc = aux;
-
-                char nombre_aux[30];
-                strcpy(nombre_aux, personas[j].nombre);
-                strcpy(personas[j].nombre, personas[j + 1].nombre);
-                strcpy(personas[j + 1].nombre, nombre_aux);
-
-                int id_aux = personas[j].id;
-                personas[j].id = personas[j + 1].id;
-                personas[j + 1].id = id_aux;
-
-                float peso_aux = personas[j].peso;
-                personas[j].peso = personas[j + 1].peso;
-                personas[j + 1].peso = peso_aux;
-
-                float estatura_aux = personas[j].estatura;
-                personas[j].estatura = personas[j + 1].estatura;
-                personas[j + 1].estatura = estatura_aux;
+                datospersonales temp = personas[j];
+                personas[j] = personas[j + 1];
+                personas[j + 1] = temp;
             }
         }
     }
